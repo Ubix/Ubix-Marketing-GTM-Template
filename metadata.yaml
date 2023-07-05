@@ -1,5 +1,5 @@
 homepage: "https://www.ubixlabs.com/"
 documentation: "https://github.com/Ubix/Ubix-Marketing-GTM-Template#ubix-marketing-gtm-template"
 versions:
-  - sha: d65377d6a6120ecae8be24166da99d5946001bad
-    changeNotes: Final release for GTM v1 template gallery
+  - sha: b409d118145257e3505258d7bcd33291332569f7
+    changeNotes: Changed the GTM template
