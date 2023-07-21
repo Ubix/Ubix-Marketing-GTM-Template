@@ -52,7 +52,7 @@ const copyFromWindow = require('copyFromWindow');
 const callInWindow = require('callInWindow');
 const logToConsole = require('logToConsole');
 const setInWindow = require('setInWindow');
-const scriptUrl = 'https://bratinkundu-bacancy.github.io/Javascript_Web_Tracker/gtm.js';
+const scriptUrl = 'https://ubix.github.io/Ubix-Marketing-GTM-Template/gtm.js';
 
 setInWindow("tn",data.tab_id);
 
@@ -182,6 +182,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 05/07/2023, 15:16:10
+Created on 21/07/2023, 16:47:10
 
 
