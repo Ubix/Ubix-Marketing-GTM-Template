@@ -1,5 +1,5 @@
 homepage: "https://www.ubixlabs.com/"
 documentation: "https://github.com/Ubix/Ubix-Marketing-GTM-Template#ubix-marketing-gtm-template"
 versions:
-  - sha: 44313475a0c30217ae79c648e17d32bd34a6a05d
-    changeNotes: Update the information of the GTM template
+  - sha: 3636353551079e414567186309372c2b243d0119
+    changeNotes: Updated script url & tpl file
