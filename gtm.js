@@ -1,10 +1,13 @@
-var apiUrl = 'https://ubix-data-collector.home.ubix.io/api/real-time-collect'
+var apiUrl = 'https://ubix-data-collector.home.ubix.io/api/upload'
 
 var INITIAL_WAIT = 3000;
 var INTERVAL_WAIT = 10000;
 var ONE_SECOND = 1000;
 
 var tableName = window.tn || 'marketingtag';
+var baseUrl = window.url || '';
+var accessToken = window.tkn || 'dataSpace@ubix.com';
+var appKey = window.ak || 'dataSpace';
 
 var events = [
     "mouseup",
@@ -135,8 +138,8 @@ function sendSignalData(signal_event) {
             referrer: document.referrer !== '' & window.location.href !== document.referrer ? document.referrer : '',
             /** New fields addition */
             pageTitle: document.title,
-            pageLoadTime: signal_event === ('excessive_reloads' || 'page_entry') ? pageLoadTime : 0,
-            fisrtPaint: signal_event === ('excessive_reloads' || 'page_entry') ? fist_contentful_paint : 0,
+            pageLoadTime: (signal_event === 'excessive_reloads' || signal_event === 'page_entry') ? pageLoadTime : 0,
+            fisrtPaint: (signal_event === 'excessive_reloads' || signal_event === 'page_entry') ? fist_contentful_paint : 0,
             xpath: signal_event.includes('click') || signal_event.includes('hover') ? xpath : ''
 
         }
@@ -145,8 +148,8 @@ function sendSignalData(signal_event) {
             tableName: tableName,
             data: [signalData],
             clientInfo: {
-                appKey: "dataSpace",
-                accessToken: "dataSpace@ubix.com",
+                appKey: appKey,
+                accessToken: accessToken,
                 timeStamp: new Date().getTime()
             }
         }
@@ -211,7 +214,6 @@ events.forEach(function (e) {
             }
         }
         if (e === 'load') {
-            console.log("reloading...")
             if (window.performance.getEntriesByName('first-contentful-paint').length > 0) {
                 fist_contentful_paint = window.performance.getEntriesByName('first-contentful-paint')[0].startTime;
             }
