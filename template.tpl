@@ -33,7 +33,7 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "TEXT",
     "name": "tab_id",
-    "displayName": "Tab ID",
+    "displayName": "Dataset Name",
     "simpleValueType": true,
     "valueValidators": [
       {
@@ -41,6 +41,39 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "help": "Enter the value you got from the connector"
+  },
+  {
+    "type": "TEXT",
+    "name": "appkey",
+    "displayName": "App Key",
+    "simpleValueType": true,
+    "valueValidators": [
+      {
+        "type": "NON_EMPTY"
+      }
+    ]
+  },
+  {
+    "type": "TEXT",
+    "name": "token",
+    "displayName": "Access Token",
+    "simpleValueType": true,
+    "valueValidators": [
+      {
+        "type": "NON_EMPTY"
+      }
+    ]
+  },
+  {
+    "type": "TEXT",
+    "name": "baseurl",
+    "displayName": "URL",
+    "simpleValueType": true,
+    "valueValidators": [
+      {
+        "type": "NON_EMPTY"
+      }
+    ]
   }
 ]
 
@@ -55,6 +88,10 @@ const setInWindow = require('setInWindow');
 const scriptUrl = 'https://ubix.github.io/Ubix-Marketing-GTM-Template/gtm.js';
 
 setInWindow("tn",data.tab_id);
+setInWindow("ak", data.appkey);
+setInWindow("tkn", data.token);
+setInWindow("url",data.baseurl);
+
 
 injectScript(scriptUrl, data.gtmOnSuccess(),  data.gtmOnFailure());
 
@@ -135,6 +172,123 @@ ___WEB_PERMISSIONS___
                     "boolean": true
                   }
                 ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "ak"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "tkn"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "url"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
               }
             ]
           }
@@ -160,7 +314,7 @@ ___WEB_PERMISSIONS___
             "listItem": [
               {
                 "type": 1,
-                "string": "https://bratinkundu-bacancy.github.io/Javascript_Web_Tracker/gtm.js"
+                "string": "https://ubix.github.io/Ubix-Marketing-GTM-Template/gtm.js"
               }
             ]
           }
@@ -182,6 +336,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 21/07/2023, 16:47:10
+Created on 26/07/2023, 14:16:11
 
 
