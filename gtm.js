@@ -1,4 +1,4 @@
-var apiUrl = 'https://ubix-data-collector.home.ubix.io/api/upload'
+var apiUrl = 'https://data-service.master-dev-1.ubix.io/api/upload'
 
 var INITIAL_WAIT = 3000;
 var INTERVAL_WAIT = 10000;
