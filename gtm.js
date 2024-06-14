@@ -147,11 +147,11 @@ function sendSignalData(signal_event) {
         var apiRequestBody = {
             tableName: tableName,
             data: [{
-                prod_workspace_id : "MarketingTag_New_QC45_309b76f543fb",
-                solution_id : "MarketingTag",
+                prod_workspace_id : "Market_Tag_Predict_6dK9_b60a39bf7076",
+                solution_id : "predict",
                 df_list : [
                     {
-                        action_name : "marketing-tag-1",
+                        action_name : "Ubix_ubix_test_MarketingTag-1",
                         port_name : "edit_columns_and_rows_input_data",
                         input : [signalData]
                     }
