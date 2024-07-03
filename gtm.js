@@ -6,7 +6,7 @@ var ONE_SECOND = 1000;
 
 var tableName = window.tn || 'marketingtag';
 var baseUrl = window.url || '';
-var accessToken = window.tkn || 'dataSpace@ubix.com';
+var accessToken = 'dataSpace@ubix.com';
 var appKey = window.ak || 'dataSpace';
 
 var events = [
